@@ -181,10 +181,10 @@ header .title-container .title a:hover::before {
 main {
   min-height: 100vh;
   width: 100%;
+  background: rgba(238, 241, 255, 0.8);
 }
 
 main .courses-container {
-  background: rgba(238, 241, 255, 0.8);
   width: 100%;
   min-height: 50rem;
   position: relative;
@@ -248,7 +248,6 @@ main .courses-container .courseTitle p {
 }
 
 main .container {
-  background: rgba(238, 241, 255, 0.8);
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -374,7 +373,6 @@ main .container .img-container .text .hideP.active {
 }
 
 main .container2 {
-  background: rgba(238, 241, 255, 0.8);
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -456,6 +454,7 @@ footer {
   width: 100%;
   background-image: linear-gradient(120deg, #0984e3 0%, #003bb1 100%);
   position: relative;
+  bottom: 0;
 }
 
 footer .inner-footer {
@@ -579,6 +578,9 @@ footer .copyRight p a {
   #btn {
     display: block;
   }
+  header .logo {
+    margin-top: 8rem;
+  }
   header .title-container .title {
     width: 100%;
   }
@@ -605,27 +607,38 @@ footer .copyRight p a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem;
+  }
+  header .navBar ul li {
+    width: 90%;
+    margin: 0 !important;
+    border-radius: 1rem;
+  }
+  header .navBar ul li:hover {
+    background: rgba(0, 0, 0, 0.3);
   }
   header .navBar ul li a {
     font-size: 2.5rem !important;
   }
   main .courses-container {
-    height: calc(100vh - 40rem);
-    margin-top: -40rem;
-    background: transparent;
-    position: relative;
+    height: calc(100vh - 15rem);
   }
   main .courses-container .coursesBox {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
-    width: 80%;
+    margin-top: -15rem;
+    width: 70%;
   }
   main .courses-container .coursesBox .items {
     margin: 1rem;
   }
   main .courses-container .courseTitle {
     left: 0;
+    top: 40%;
     -webkit-transform: translate(0, 35rem);
             transform: translate(0, 35rem);
     width: 100%;
@@ -642,30 +655,37 @@ footer .copyRight p a {
         flex-basis: 100%;
   }
   main .container .img-container .text {
-    margin-top: 8rem;
+    margin-top: 3rem;
     max-width: 80%;
   }
   main .container .img-container .text .slid-text {
     padding: 3rem 2rem;
   }
   main .container2 {
-    margin-top: -10rem;
+    height: 100vh;
+    margin-top: 10rem;
   }
   main .container2 .MTitle {
-    top: 5rem;
+    top: 3rem;
   }
   main .container2 .testimonials-container {
-    margin-top: -15rem;
+    top: 8rem;
     width: 90%;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 8rem;
+  }
+  main .container2 .testimonials-container .Titems {
+    padding: 2rem 1rem 1rem 2rem;
+    -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.09);
+            box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.09);
   }
   footer .fTitle {
     padding: 0 5rem;
+    top: 15%;
   }
   footer .copyRight {
     text-align: center;
+    top: 30%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

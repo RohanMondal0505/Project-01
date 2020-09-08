@@ -156,9 +156,9 @@ header {
 main {
     min-height: 100vh;
     width: 100%;
+    background: rgba(238, 241, 255, 0.8);
 
     .courses-container {
-        background: rgba(238, 241, 255, 0.8);
         width: 100%;
         min-height: 50rem;
         position: relative;
@@ -218,7 +218,6 @@ main {
     }
 
     .container {
-        background: rgba(238, 241, 255, 0.8);
         width: 100%;
         height: 100vh;
         display: flex;
@@ -317,7 +316,6 @@ main {
     }
 
     .container2 {
-        background: rgba(238, 241, 255, 0.8);
         width: 100%;
         height: 100vh;
         display: flex;
@@ -386,6 +384,7 @@ footer {
     width: 100%;
     background-image: linear-gradient(120deg, #0984e3 0%, #003bb1 100%);
     position: relative;
+    bottom: 0;
 
     .inner-footer {
         height: 100%;
@@ -459,7 +458,8 @@ footer {
         }
     }
 }
-#btn{
+
+#btn {
     color: #ffffff;
     font-size: 2.5rem;
     display: none;
@@ -468,12 +468,13 @@ footer {
     top: 3rem;
     z-index: 5;
 
-    
-    &.hide::before{
+
+    &.hide::before {
         content: '\f00d';
         color: #ff0000;
     }
 }
+
 @media(max-width: 1177px) {
     html {
         font-size: 50%;
@@ -509,10 +510,15 @@ footer {
 }
 
 @media(max-width: 755px) {
-    #btn{
+    #btn {
         display: block;
     }
+
     header {
+        .logo {
+            margin-top: 8rem;
+        }
+
         .title-container .title {
             width: 100%;
         }
@@ -523,23 +529,34 @@ footer {
             top: 0;
             left: 0;
             background: linear-gradient(70deg,
-            rgba(9, 132, 227, 0.9) 40%,
-            rgba(0, 59, 177, 0.9) 100%);
+                    rgba(9, 132, 227, 0.9) 40%,
+                    rgba(0, 59, 177, 0.9) 100%);
             width: 100%;
             min-height: 30rem;
             text-align: center;
             padding: 5rem 0;
             z-index: 4;
 
-            &.hide{
+            &.hide {
                 display: block;
             }
-            
-            ul{
+
+            ul {
                 display: flex;
                 flex-direction: column;
-                li a{
-                    font-size: 2.5rem !important;
+                align-items: center;
+                padding: 2rem;
+
+                li {
+                    width: 90%;
+                    margin: 0 !important;
+                    border-radius: 1rem;
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.3);
+                    }
+                    a{
+                        font-size: 2.5rem !important;
+                    }
 
                 }
             }
@@ -549,16 +566,13 @@ footer {
     main {
 
         .courses-container {
-            height: calc(100vh - 40rem);
-            margin-top: -40rem;
-            background: transparent;
-            position: relative;
-            // border: 1px solid #000;
+            height: calc(100vh - 15rem);
 
             .coursesBox {
                 grid-template-columns: repeat(1, 1fr);
                 margin: 0 auto;
-                width: 80%;
+                margin-top: -15rem;
+                width: 70%;
 
                 .items {
                     margin: 1rem;
@@ -567,6 +581,7 @@ footer {
 
             .courseTitle {
                 left: 0;
+                top: 40%;
                 transform: translate(0, 35rem);
                 width: 100%;
                 height: 15rem;
@@ -583,7 +598,7 @@ footer {
                 }
 
                 .text {
-                    margin-top: 8rem;
+                    margin-top: 3rem;
                     max-width: 80%;
 
                     .slid-text {
@@ -594,17 +609,23 @@ footer {
         }
 
         .container2 {
-            margin-top: -10rem;
+            height: 100vh;
+            margin-top: 10rem;
 
             .MTitle {
-                top: 5rem;
+                top: 3rem;
             }
 
             .testimonials-container {
-                margin-top: -15rem;
+                top: 8rem;
                 width: 90%;
                 grid-template-columns: repeat(1, 1fr);
-                grid-row-gap: 8rem;
+
+                .Titems {
+                    padding: 2rem 1rem 1rem 2rem;
+                    box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.09);
+                }
+
             }
         }
     }
@@ -612,10 +633,12 @@ footer {
     footer {
         .fTitle {
             padding: 0 5rem;
+            top: 15%;
         }
 
         .copyRight {
             text-align: center;
+            top: 30%;
             flex-direction: column;
 
             p {
