@@ -1,0 +1,678 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(70deg, rgba(9, 132, 227, 0.6) 40%, rgba(0, 59, 177, 0.7) 100%), url(../Images/ashkan-forouzani-4Zlk5Sgy-_E-unsplash.jpg);
+  background-size: cover;
+}
+
+header .header-bar {
+  height: 16rem;
+  margin: 0 21.1rem 0 21.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-bar .navBar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-bar .navBar ul li {
+  list-style: none;
+  margin-right: 3rem;
+  padding: 0.8rem;
+}
+
+header .header-bar .navBar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  position: relative;
+}
+
+header .header-bar .navBar ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  height: 0.2rem;
+  background: aqua;
+  bottom: -0rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: huerotate 5s linear infinite;
+          animation: huerotate 5s linear infinite;
+}
+
+@-webkit-keyframes huerotate {
+  0% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+}
+
+@keyframes huerotate {
+  0% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+}
+
+header .header-bar .navBar ul li a:hover {
+  color: aqua;
+}
+
+header .header-bar .navBar ul li a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+header .title-container {
+  width: 100%;
+  height: calc(100% - 16rem);
+  position: relative;
+}
+
+header .title-container .title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header .title-container .title h1 {
+  font-size: 4.8rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+header .title-container .title p {
+  color: #fff;
+  margin-bottom: 5rem;
+}
+
+header .title-container .title a {
+  text-decoration: none;
+  padding: 1.2rem 3.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: #fff;
+  color: #0984e3;
+  position: relative;
+  -webkit-box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+header .title-container .title a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+header .title-container .title a:hover {
+  -webkit-box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+header .title-container .title a:hover::before {
+  background: rgba(9, 132, 227, 0.2);
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+main .courses-container {
+  background: rgba(238, 241, 255, 0.8);
+  width: 100%;
+  min-height: 50rem;
+  position: relative;
+  color: #3a3a3a;
+}
+
+main .courses-container .coursesBox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33rem)[3];
+      grid-template-columns: repeat(3, 33rem);
+  margin: auto;
+  grid-column-gap: 6rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: -11.5rem;
+}
+
+main .courses-container .coursesBox .items {
+  height: 23rem;
+  border-radius: 1rem;
+  background: #fff;
+  text-align: center;
+  padding: 3rem;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+}
+
+main .courses-container .coursesBox .items i {
+  color: #0984e3;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+main .courses-container .coursesBox .items h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2f3f50;
+}
+
+main .courses-container .courseTitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  width: 50rem;
+}
+
+main .courses-container .courseTitle h1 {
+  font-size: 3.5rem;
+  color: #2f3f50;
+}
+
+main .courses-container .courseTitle p {
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+main .container {
+  background: rgba(238, 241, 255, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .MTitle {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  max-width: 70rem;
+}
+
+main .container .MTitle h1 {
+  font-size: 3.5rem;
+  color: #2f3f50;
+}
+
+main .container .MTitle p {
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+main .container .img-container {
+  max-width: 110rem;
+  height: 50rem;
+  position: relative;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .container .img-container .imgBox {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container .img-container .imgBox img {
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+main .container .img-container .imgBox p {
+  text-align: center;
+}
+
+main .container .img-container .text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+}
+
+main .container .img-container .text .slid-text {
+  padding: 4rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+}
+
+main .container .img-container .text .slid-text i {
+  margin-right: 2rem;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+main .container .img-container .text .slid-text.colorchange {
+  color: #0984e3;
+}
+
+main .container .img-container .text .slid-text.colorchange i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main .container .img-container .text .hideP {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+main .container .img-container .text .hideP.active {
+  display: block;
+  height: auto;
+  overflow: hidden;
+  padding: 4rem 3rem;
+  color: #3a3a3a;
+  border-top: 1px solid #dddddd;
+}
+
+main .container2 {
+  background: rgba(238, 241, 255, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container2 .MTitle {
+  position: relative;
+  left: 50%;
+  top: 18%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  max-width: 70rem;
+}
+
+main .container2 .MTitle h1 {
+  font-size: 3.5rem;
+  color: #2f3f50;
+}
+
+main .container2 .testimonials-container {
+  max-width: 111rem;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+}
+
+main .container2 .testimonials-container .Titems {
+  padding: 3rem 2rem 2rem 3rem;
+  -webkit-box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.06);
+}
+
+main .container2 .testimonials-container .Titems .inerItems1 {
+  margin-bottom: 2rem;
+}
+
+main .container2 .testimonials-container .Titems .inerItems2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container2 .testimonials-container .Titems .inerItems2 img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+main .container2 .testimonials-container .Titems .inerItems2 h4 {
+  color: #3a3a3a;
+}
+
+main .container2 .testimonials-container .Titems .inerItems2 h4 p {
+  font-size: 1.3rem;
+  color: #2f3f50;
+}
+
+footer {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(120deg, #0984e3 0%, #003bb1 100%);
+  position: relative;
+}
+
+footer .inner-footer {
+  height: 100%;
+  max-width: 111rem;
+  margin: 0 auto;
+  color: #fff;
+}
+
+footer .fTitle {
+  text-align: center;
+  position: relative;
+  top: 28%;
+}
+
+footer .fTitle h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+footer .fTitle p {
+  color: #fff;
+  margin-bottom: 5rem;
+}
+
+footer .fTitle a {
+  text-decoration: none;
+  padding: 1.2rem 3.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: #fff;
+  color: #0984e3;
+  position: relative;
+  -webkit-box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+footer .fTitle a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+footer .fTitle a:hover {
+  -webkit-box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+footer .fTitle a:hover::before {
+  background: rgba(9, 132, 227, 0.2);
+}
+
+footer .copyRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+  top: 50%;
+}
+
+footer .copyRight p a {
+  text-decoration: none;
+  color: aqua;
+}
+
+#btn {
+  color: #ffffff;
+  font-size: 2.5rem;
+  display: none;
+  position: fixed;
+  right: 4.5rem;
+  top: 3rem;
+  z-index: 5;
+}
+
+#btn.hide::before {
+  content: '\f00d';
+  color: #ff0000;
+}
+
+@media (max-width: 1177px) {
+  html {
+    font-size: 50%;
+  }
+  header .header-bar {
+    margin: 0 15rem 0 15rem;
+  }
+  header .title-container .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  html {
+    font-size: 40%;
+  }
+  header .header-bar {
+    margin: 0 15rem 0 15rem;
+  }
+  header .title-container .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 755px) {
+  #btn {
+    display: block;
+  }
+  header .title-container .title {
+    width: 100%;
+  }
+  header .navBar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(70deg, rgba(9, 132, 227, 0.9) 40%, rgba(0, 59, 177, 0.9) 100%);
+    width: 100%;
+    min-height: 30rem;
+    text-align: center;
+    padding: 5rem 0;
+    z-index: 4;
+  }
+  header .navBar.hide {
+    display: block;
+  }
+  header .navBar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .navBar ul li a {
+    font-size: 2.5rem !important;
+  }
+  main .courses-container {
+    height: calc(100vh - 40rem);
+    margin-top: -40rem;
+    background: transparent;
+    position: relative;
+  }
+  main .courses-container .coursesBox {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    width: 80%;
+  }
+  main .courses-container .coursesBox .items {
+    margin: 1rem;
+  }
+  main .courses-container .courseTitle {
+    left: 0;
+    -webkit-transform: translate(0, 35rem);
+            transform: translate(0, 35rem);
+    width: 100%;
+    height: 15rem;
+  }
+  main .container .img-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container .img-container .imgBox {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  main .container .img-container .text {
+    margin-top: 8rem;
+    max-width: 80%;
+  }
+  main .container .img-container .text .slid-text {
+    padding: 3rem 2rem;
+  }
+  main .container2 {
+    margin-top: -10rem;
+  }
+  main .container2 .MTitle {
+    top: 5rem;
+  }
+  main .container2 .testimonials-container {
+    margin-top: -15rem;
+    width: 90%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 8rem;
+  }
+  footer .fTitle {
+    padding: 0 5rem;
+  }
+  footer .copyRight {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .copyRight p {
+    margin: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
