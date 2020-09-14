@@ -460,13 +460,14 @@ footer {
 }
 
 #btn {
+    display: none;
     color: #ffffff;
     font-size: 2.5rem;
-    display: none;
     position: fixed;
     right: 4.5rem;
     top: 3rem;
     z-index: 5;
+    cursor: pointer;
 
 
     &.hide::before {
