@@ -539,7 +539,7 @@ footer .copyRight p a {
   display: none;
   color: #ffffff;
   font-size: 2.5rem;
-  position: fixed;
+  position: absolute;
   right: 4.5rem;
   top: 3rem;
   z-index: 5;
@@ -548,7 +548,7 @@ footer .copyRight p a {
 
 #btn.hide::before {
   content: '\f00d';
-  color: #ff0000;
+  color: #ffffff;
 }
 
 @media (max-width: 1177px) {
@@ -587,7 +587,7 @@ footer .copyRight p a {
   }
   header .navBar {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background: linear-gradient(70deg, rgba(9, 132, 227, 0.9) 40%, rgba(0, 59, 177, 0.9) 100%);
